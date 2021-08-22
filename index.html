@@ -3,14 +3,33 @@
   <head>
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
+    
+    <title>Калькулятор</title>
+    <link href="bootstrap.min.css">
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+   <input type="text" id="scope">
+   <div class="contener">
+    <button class="number">0</button>
+     <button class="number">1</button>
+     <button class="number">2</button>
+     <button class="number">3</button>
+     <button class="number">4</button>
+     <button class="number">5</button>
+     <button class="number">6</button>
+     <button class="number">7</button>
+     <button class="number">8</button>
+     <button class="number">9</button>
+   </div>
+   <div class="contener">
+    <button class="number">+</button>
+    <button class="number">-</button>
+    <button class="number">*</button>
+    <button class="number">/</button>
+    <button id="result">=</button>
+    <button id="clear">C</button>
+   </div>
 
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>

@@ -1,6 +1,30 @@
-// This file is required by the index.html file and will
-// be executed in the renderer process for that window.
-// No Node.js APIs are available in this process because
-// `nodeIntegration` is turned off. Use `preload.js` to
-// selectively enable features needed in the rendering
-// process.
+const buttons = document.querySelectorAll(".number")
+const input = document.getElementById("scope")
+const result = document.getElementById("result")
+const clear = document.getElementById("clear")
+
+buttons.forEach(
+    function (button) {
+        button.addEventListener(
+            "click",
+            function (event)  {
+                input.value += event.target.innerText
+            }
+        )
+    }
+)
+
+result.addEventListener(
+  "click",
+  function (event) {
+      const res = eval(input.value)
+      input.value = res
+  }
+)
+
+clear.addEventListener(
+    "click",
+    function (event) {        
+        input.value = ""
+    }  
+)
